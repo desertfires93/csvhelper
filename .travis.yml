@@ -2,6 +2,7 @@ language: python
 
 install:
   - pip install codecov
+  - pip install coverage
 
 # Run the unit test
 script:
