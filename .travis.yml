@@ -4,10 +4,9 @@ install:
   - pip install codecov
   - pip install coverage
 
-# Run the unit test
-script:
-  - coverage run test_shuffle.py
 
 # Push the results back to codecov
 after_success:
-  - codecov
+  - coverage xml
+  - coverage report
+  - bash <(curl -s https://codecov.io/bash) -Z -X gcov -X coveragepy -X search -X xcode -X gcovout -X fix -f coverage.xml
