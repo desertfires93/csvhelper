@@ -10,4 +10,4 @@ script:
 
 # Push the results back to codecov
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -Z -X gcov -X coveragepy -X search -X xcode -X gcovout -X fix
+  - codecov
