@@ -1,0 +1,13 @@
+language: python
+
+install:
+  - pip install codecov
+  - pip install coverage
+
+script:
+  - pytest test_shuffle.py
+  - coverage run test_shuffle.py
+
+# Push the results back to codecov
+after_success:
+  - codecov
