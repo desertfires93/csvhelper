@@ -6,7 +6,7 @@ install:
 
 # Run the unit test
 script:
-  - coverage run tests.py
+  - coverage run test_shuffle.py
 
 # Push the results back to codecov
 after_success:
