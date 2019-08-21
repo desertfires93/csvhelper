@@ -19,10 +19,6 @@ def shuffle(contents):
     return newcsv
 
 
-def helper():
-    return ':)'
-
-
 if __name__ == '__main__':
     args = parse_args()
     for i in range(0, args.num_shuffles):

@@ -1,5 +1,6 @@
 import unittest
-from shuffle import shuffle, helper
+from shuffle import helper
+
 
 class TestShuffle(unittest.TestCase):
     def test_shuffle(self):
