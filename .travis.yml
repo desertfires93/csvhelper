@@ -6,10 +6,9 @@ install:
 
 script:
   - pytest test_shuffle.py
-
+  - coverage xml
+  - coverage report
 
 # Push the results back to codecov
 after_success:
-  - coverage xml
-  - coverage report
   - bash <(curl -s https://codecov.io/bash) -Z -X gcov -X coveragepy -X search -X xcode -X gcovout -X fix -f coverage.xml
